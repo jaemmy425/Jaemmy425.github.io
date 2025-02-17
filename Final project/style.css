@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+h1 {
+  font-size: 20px;
+  line-height: 30px;
+}
+h2 {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+a {
+  text-decoration: none;
+  color: #2dc4b2;
+}
+#console {
+  position: absolute;
+  width: 400px;
+  margin: 10px;
+  padding: 10px 10px;
+  background-color: white;
+}
+9 .session {
+  margin-bottom: 20px;
+}
+.row {
+  height: 12px;
+  width: 100%;
+}
+
+#legend {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.8); /* 降低透明度 */
+  padding: 5px 10px;
+  z-index: 10; /* 确保图例层级高于其他内容 */
+  width: 220px; /* 调整宽度使得图例更加紧凑 */
+  border-radius: 5px; /* 为图例添加圆角 */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* 添加阴影使图例更加突出 */
+}
+
+#legend div {
+  margin-bottom: 5px; /* 缩小每个元素的间距 */
+}
+
+#legend span {
+  font-size: 12px; /* 调整文字大小 */
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+}
+
+/* 设置渐变条 */
+#legend .gradient-bar {
+  height: 15px; /* 缩小渐变条高度 */
+  background: linear-gradient(
+    to right,
+    hsl(125, 70%, 50%),
+    /* 0-33: 柔和绿色 */ hsl(50, 90%, 55%),
+    /* 34-54: 柔和黄色 */ hsl(30, 85%, 60%),
+    /* 55-70: 稍微降低饱和度的橙色 */ hsl(10, 80%, 60%),
+    /* 71-85: 温和的红色 */ hsl(280, 70%, 55%) /* 86+: 柔和的紫色 */
+  );
+}
+/* Style for the geocoder input field */
+.mapboxgl-ctrl-geocoder {
+  width: 280px !important;
+  z-index: 100;
+  /* Set a higher z-index for geocoder control */
+}
